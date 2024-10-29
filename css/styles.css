@@ -3977,6 +3977,8 @@ textarea.form-control-lg {
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    position: absolute;
+    right: 2rem;
   }
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
