@@ -72,5 +72,13 @@ window.addEventListener('DOMContentLoaded', event => {
     });
   });
 
+let mybutton = document.getElementById("myBtn");
+  
+  
+window.scrollTo({top: 0, behavior: 'smooth'});
+  
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
   
