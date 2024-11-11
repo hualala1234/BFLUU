@@ -649,33 +649,53 @@ progress {
   margin-right: auto;
   margin-left: auto;
 }
+.container-p
+{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .container {
   margin: 0;
   
 }
+.container-p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .container-sm, .container, .container-p {
     max-width: 540px;
   }
+ 
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md, .container-sm, .container, .container-p {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .container-lg, .container-md, .container-sm, .container,.container-p {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl, .container-lg, .container-md, .container-sm, .container,.container-p {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container,.container-p {
     max-width: 1400px;
   }
 }
@@ -11474,6 +11494,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .portfolio-img{
   width: 420px;
+  height: 224.15px;
   
 }
 .information-text{
@@ -11500,6 +11521,22 @@ section#contact form#contactForm :-ms-input-placeholder {
     margin: 0 1.1rem;
   
   }
+  .portfolio-img{
+    width: 350px;
+  
+    
+  }
+  #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 350px;
+
+    background: #21252991;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+}
 }
 @media (max-width: 430px){
   .information-text{
@@ -11509,15 +11546,15 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   .small{
     text-align: justify;
-    margin: 0 3rem 1rem 6rem;
+    margin: 0 3rem 1rem 5rem;
   
   }
   .portfolio-img{
-    width: 380px;
+    width: 360px;
     
   }
   #portfolio .portfolio-item {
-    width: 380px;
+    width: 360px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -11532,4 +11569,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 .modal-body strong{
   font-size: 1.6rem;
 
+}
+body{
+  width: 100%;
 }
