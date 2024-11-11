@@ -11474,11 +11474,13 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: justify;
   margin-left: 5rem;
   margin-right: 3rem;
+  font-size: 16px;
 
 }
 .small{
   text-align: justify;
   margin: 0 4.5rem 0 8.5rem;
+  font-size: 16px;
 
 }
 @media (max-width: 1024px){
