@@ -51,26 +51,31 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    
+
 });
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const aboutSection = document.getElementById("about");
+    const contactSection = document.getElementById("contact");
     const navLink = document.querySelector('.nav-link[href="#about"]');
 
-    // 偵測滾動事件
     window.addEventListener("scroll", function () {
       const sectionTop = aboutSection.offsetTop;
-      const sectionHeight = aboutSection.offsetHeight;
+      const sectionBottom = sectionTop + aboutSection.offsetHeight;
       const scrollPos = window.scrollY;
+      const contactTop = contactSection.offsetTop;
 
-      // 檢查當前是否在 about 區域
-      if (scrollPos >= sectionTop - 50 && scrollPos < sectionTop + sectionHeight) {
-        navLink.classList.add("active"); // 加上 active 類
+      // 當滾動範圍在 about 區域內時，啟用 active 類
+      if (scrollPos >= sectionTop && scrollPos < Math.min(sectionBottom, contactTop)) {
+        navLink.classList.add("active");
       } else {
-        navLink.classList.remove("active"); // 移除 active 類
+        navLink.classList.remove("active");
       }
     });
   });
+
+  
 
 let mybutton = document.getElementById("myBtn");
   
