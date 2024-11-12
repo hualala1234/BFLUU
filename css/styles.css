@@ -11586,7 +11586,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     display: flex;
     position: absolute;
-    width: 360px;
+    
     background: #21252991;
     align-items: center;
     justify-content: center;
