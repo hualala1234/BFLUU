@@ -11561,12 +11561,20 @@ section#contact form#contactForm :-ms-input-placeholder {
 @media (max-width: 430px){
   .information-text{
     text-align: justify;
+<<<<<<< HEAD
+    margin: 0 2rem 3rem 2rem;
+=======
     margin: 0 2rem 1rem 2rem;
+>>>>>>> 9874d3308986706f4c6be3bc2a210825439928c9
     
   }
   .small{
     text-align: justify;
+<<<<<<< HEAD
+    margin: 0 3rem 3rem 5rem;
+=======
     margin: 0 3rem 1rem 5rem;
+>>>>>>> 9874d3308986706f4c6be3bc2a210825439928c9
   
   }
   .portfolio-img{
@@ -11614,7 +11622,11 @@ body{
   display: inline-block;
 }
 .offwhite:hover{
+<<<<<<< HEAD
+  color: #FFFFFF;
+=======
   background-color: transparent;
+>>>>>>> 9874d3308986706f4c6be3bc2a210825439928c9
 }
 .list-inline li {
   justify-content: space-between !important;
