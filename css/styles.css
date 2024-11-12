@@ -11613,6 +11613,9 @@ body{
   
   display: inline-block;
 }
+.offwhite:hover{
+  background-color: transparent;
+}
 .list-inline li {
   justify-content: space-between !important;
 }
