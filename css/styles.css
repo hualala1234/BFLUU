@@ -11419,6 +11419,7 @@ section#contact {
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
 }
 section#contact .section-heading {
   color: #fff;
@@ -11530,21 +11531,33 @@ section#contact form#contactForm :-ms-input-placeholder {
   
   }
   .portfolio-img{
-    width: 350px;
+    width: 317px;
   
     
   }
+  #portfolio .portfolio-item {
+    width: 317px;
+    margin: 0 10px;
+    height: 360px;
+    background-color: #FFFFFF;
+  }
+  
   #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     display: flex;
     position: absolute;
-    width: 350px;
-
+    width: 317px;
     background: #21252991;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity ease-in-out 0.25s;
-}
+  }
+  
+  #portfolio .portfolio-item .portfolio-link {
+    width: 317px;
+  }
+  
+
 }
 @media (max-width: 430px){
   .information-text{
@@ -11558,18 +11571,28 @@ section#contact form#contactForm :-ms-input-placeholder {
   
   }
   .portfolio-img{
-    width: 360px;
+    width: 320px;
     
   }
   #portfolio .portfolio-item {
     width: 360px;
-    height: 400px;
+    height: 360px;
     margin-left: auto;
     margin-right: auto;
   }
   .modal-body strong{
     font-size: 1.6rem;
   
+  }
+  #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 360px;
+    background: #21252991;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
   }
 }
 
