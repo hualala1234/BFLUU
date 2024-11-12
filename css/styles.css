@@ -11522,7 +11522,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 @media (max-width: 1024px){
   .information-text{
     text-align: justify;
-    margin: 0 1rem;
+    margin: 0 0.8rem;
     
   }
   .small{
@@ -11615,4 +11615,10 @@ body{
 }
 .list-inline li {
   justify-content: space-between !important;
+}
+
+#services img{
+  height: 9em;
+  width: 9em;
+  border-radius: 50%;
 }
