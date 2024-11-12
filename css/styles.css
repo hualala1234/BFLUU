@@ -11524,6 +11524,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     text-align: justify;
     margin: 0 0.8rem;
     
+    
   }
   .small{
     text-align: justify;
@@ -11557,12 +11558,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   .information-text{
     text-align: justify;
-    margin: 0 2rem 3rem 2rem;
+    margin: 0 0rem 3rem 0rem;
    
   }
   .small {
     text-align: justify;
-    margin: 0 3rem 3rem 5rem;
+    margin: 0 0rem 3rem 2rem;
 
     font-size: 16px;
   }
