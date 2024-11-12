@@ -686,7 +686,7 @@ progress {
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container,.container-p {
-    max-width: 960px;
+    max-width: 1024px;
   }
 }
 @media (min-width: 1200px) {
@@ -11537,7 +11537,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   #portfolio .portfolio-item {
     width: 317px;
-    margin: 0 10px;
     height: 360px;
     background-color: #FFFFFF;
   }
