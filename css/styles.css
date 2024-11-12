@@ -11561,12 +11561,12 @@ section#contact form#contactForm :-ms-input-placeholder {
 @media (max-width: 430px){
   .information-text{
     text-align: justify;
-    margin: 0 2rem 1rem 2rem;
+    margin: 0 2rem 3rem 2rem;
     
   }
   .small{
     text-align: justify;
-    margin: 0 3rem 1rem 5rem;
+    margin: 0 3rem 3rem 5rem;
   
   }
   .portfolio-img{
