@@ -11607,3 +11607,12 @@ body{
 #contact {
   margin-top: 10rem;
 }
+
+.offwhite {
+  background-color: #6c757d;
+  
+  display: inline-block;
+}
+.list-inline li {
+  justify-content: space-between !important;
+}
