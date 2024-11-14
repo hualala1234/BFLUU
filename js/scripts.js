@@ -86,4 +86,22 @@ function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+  
+    function handleScroll() {
+      fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        
+        if (isVisible) {
+          el.classList.add("visible");
+        }
+      });
+    }
+  
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // 頁面載入時也執行一次，確保初始狀態
+  });
   
