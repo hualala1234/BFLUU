@@ -107,22 +107,36 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
 
-  document.getElementById('email').addEventListener('input', function () {
-    const emailInput = this;
-    const requiredFeedback = emailInput.nextElementSibling;       // 「這是必填問題」的錯誤提示
-    const emailFeedback = requiredFeedback.nextElementSibling;    // 「請輸入有效的電子郵件地址」的錯誤提示
-
-    if (emailInput.value.trim() === '') {
-        // 當輸入為空時，僅顯示「這是必填問題」
-        requiredFeedback.style.display = 'block';
-        emailFeedback.style.display = 'none';
-    } else if (emailInput.validity.typeMismatch) {
-        // 當輸入的格式不正確時，僅顯示「請輸入有效的電子郵件地址」
-        requiredFeedback.style.display = 'none';
-        emailFeedback.style.display = 'block';
-    } else {
-        // 當輸入有效時，不顯示任何錯誤提示
-        requiredFeedback.style.display = 'none';
-        emailFeedback.style.display = 'none';
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const submitButton = document.getElementById("submitButton");
+    
+    // 取得表單欄位
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const messageField = document.getElementById("message");
+    
+    // 檢查表單欄位狀態的函式
+    function checkFormValidity() {
+        if (nameField.value.trim() !== "" &&
+            emailField.value.trim() !== "" &&
+            emailField.checkValidity() &&
+            messageField.value.trim() !== "") {
+            submitButton.classList.remove("disabled");
+            submitButton.disabled = false;
+        } else {
+            submitButton.classList.add("disabled");
+            submitButton.disabled = true;
+        }
     }
+    
+    // 當使用者輸入時檢查表單狀態
+    form.addEventListener("input", checkFormValidity);
+    
+    // 初始檢查表單狀態
+    checkFormValidity();
 });
+
+
+
+
