@@ -127,15 +127,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const submitButton = document.getElementById("submitButton");
     
+    // 取得表單欄位
     const nameField = document.getElementById("name");
     const messageField = document.getElementById("message");
-    const submittedContentContainer = document.getElementById("submittedContent");
-
-    // Maximum number of items to display
-    const MAX_ITEMS = 3;
-
+    
+    // 檢查表單欄位狀態的函式
     function checkFormValidity() {
-        if (nameField.value.trim() !== "" && messageField.value.trim() !== "") {
+        if (nameField.value.trim() !== "" &&
+            messageField.value.trim() !== "") {
             submitButton.classList.remove("disabled");
             submitButton.disabled = false;
         } else {
@@ -143,36 +142,12 @@ document.addEventListener("DOMContentLoaded", function () {
             submitButton.disabled = true;
         }
     }
-
+    
+    // 當使用者輸入時檢查表單狀態
     form.addEventListener("input", checkFormValidity);
+    
+    // 初始檢查表單狀態
     checkFormValidity();
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form from submitting to Google Forms
-
-        // Get submitted data
-        const submittedName = nameField.value.trim();
-        const submittedMessage = messageField.value.trim();
-        
-        // Create new entry div
-        const newEntry = document.createElement("div");
-        newEntry.classList.add("contact-present-items");
-        newEntry.innerHTML = `
-            <p><strong>暱稱:</strong> ${submittedName}</p>
-            <p><strong>想對U-san說的話:</strong> ${submittedMessage}</p>
-        `;
-
-        // Append new entry to the container
-        submittedContentContainer.appendChild(newEntry);
-
-        // If there are more than MAX_ITEMS, remove the first (oldest) item to create the carousel effect
-        if (submittedContentContainer.children.length > MAX_ITEMS) {
-            submittedContentContainer.removeChild(submittedContentContainer.firstElementChild);
-        }
-
-        // Optionally, submit the form to Google Forms
-        form.submit();
-    });
 });
 
 
