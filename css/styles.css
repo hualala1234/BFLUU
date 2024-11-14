@@ -250,11 +250,27 @@ sup {
   top: -0.5em;
 }
 
-a {
+.small a {
   color: #212529;
   text-decoration: underline;
 }
-a:hover {
+.timeline-heading a {
+  color: #212529;
+  text-decoration: underline;
+}
+.portfolio-caption-area {
+  text-decoration: none;
+}
+.portfolio-caption-area:link{
+  color: #212529;
+}
+.portfolio-caption-area:visited{
+  color: #212529;
+}
+.timeline-heading a:hover {
+  color: #3366CC;
+}
+.small a:hover{
   color: #3366CC;
 }
 
@@ -11123,10 +11139,14 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
+  text-decoration: none;
+  
 }
+
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ 
 }
 
 .portfolio-modal .modal-dialog {
