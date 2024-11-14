@@ -35,6 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Unnämed介紹</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">時間軸</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">心得填寫</a></li>
+                        <li class="nav-item"><a class="nav-link" href=#contact-present>心得呈現</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">工作人員</a></li>
                         
                     </ul>
@@ -612,18 +613,11 @@
                 <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSclPFScO9SKu0WFSxqzsF1yAnXUWWcWkHrzI8B0VBMYhmvf4A/formResponse" target="_blank" >
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
-                            <div class="form-group">
+                            <div class="form-group mb-md-4">
                                 <!-- Name input-->
                                 <input class="form-control" id="name" type="text" name="entry.1324810562" placeholder="暱稱" data-sb-validations="required" name="emailAddress"/>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">這是必填問題</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" name="emailAddress" placeholder="電子郵件" data-sb-validations="required,email" novalidate />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">這是必填問題</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">請輸入有效的電子郵件地址</div>
-                            </div>
-                            
+                            </div>    
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
@@ -638,6 +632,19 @@
                 </form>
             </div>
         </section>
+
+        
+        <section class="page-section" id="contact-present">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Submitted Content</h2>
+                    <h3 class="section-subheading text-muted">先空著</h3>
+                </div>
+                <div class="row" id="submittedContent"></div> <!-- Container for dynamically added content -->
+            </div>
+        </section>
+        
+        
         
         <!-- Team-->
         <section class="page-section bg-light" id="team">

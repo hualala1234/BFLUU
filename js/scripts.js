@@ -58,23 +58,39 @@ window.addEventListener('DOMContentLoaded', event => {
 document.addEventListener("DOMContentLoaded", function () {
     const aboutSection = document.getElementById("about");
     const contactSection = document.getElementById("contact");
-    const navLink = document.querySelector('.nav-link[href="#about"]');
+    const teamSection = document.getElementById("contact-present");
+    const aboutNavLink = document.querySelector('.nav-link[href="#about"]');
+    const contactNavLink = document.querySelector('.nav-link[href="#contact"]');
+    const teamNavLink = document.querySelector('.nav-link[href="#contact-present"]');
+    const contactOffset = 100; // contact 的 margin-top 偏移量
+    const teamOffset = -80; // team 的 padding-top 偏移量
 
     window.addEventListener("scroll", function () {
-      const sectionTop = aboutSection.offsetTop;
-      const sectionBottom = sectionTop + aboutSection.offsetHeight;
       const scrollPos = window.scrollY;
-      const contactTop = contactSection.offsetTop;
+      const aboutTop = aboutSection.offsetTop;
+      const contactTop = contactSection.offsetTop - contactOffset;
+      const teamTop = teamSection.offsetTop + teamOffset;
 
-      // 當滾動範圍在 about 區域內時，啟用 active 類
-      if (scrollPos >= sectionTop && scrollPos < Math.min(sectionBottom, contactTop)) {
-        navLink.classList.add("active");
-      } else {
-        navLink.classList.remove("active");
+      // about 的範圍
+      if (scrollPos >= aboutTop && scrollPos < contactTop) {
+        aboutNavLink.classList.add("active");
+        contactNavLink.classList.remove("active");
+        teamNavLink.classList.remove("active");
+      }
+      // contact 的範圍
+      else if (scrollPos >= contactTop && scrollPos < teamTop) {
+        aboutNavLink.classList.remove("active");
+        contactNavLink.classList.add("active");
+        teamNavLink.classList.remove("active");
+      }
+      // contact-present 的範圍
+      else if (scrollPos >= teamTop) {
+        aboutNavLink.classList.remove("active");
+        contactNavLink.classList.remove("active");
+        teamNavLink.classList.add("active");
       }
     });
   });
-
   
 
 let mybutton = document.getElementById("myBtn");
@@ -111,17 +127,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const submitButton = document.getElementById("submitButton");
     
-    // 取得表單欄位
     const nameField = document.getElementById("name");
-    const emailField = document.getElementById("email");
     const messageField = document.getElementById("message");
-    
-    // 檢查表單欄位狀態的函式
+    const submittedContentContainer = document.getElementById("submittedContent");
+
+    // Maximum number of items to display
+    const MAX_ITEMS = 3;
+
     function checkFormValidity() {
-        if (nameField.value.trim() !== "" &&
-            emailField.value.trim() !== "" &&
-            emailField.checkValidity() &&
-            messageField.value.trim() !== "") {
+        if (nameField.value.trim() !== "" && messageField.value.trim() !== "") {
             submitButton.classList.remove("disabled");
             submitButton.disabled = false;
         } else {
@@ -129,13 +143,39 @@ document.addEventListener("DOMContentLoaded", function () {
             submitButton.disabled = true;
         }
     }
-    
-    // 當使用者輸入時檢查表單狀態
+
     form.addEventListener("input", checkFormValidity);
-    
-    // 初始檢查表單狀態
     checkFormValidity();
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting to Google Forms
+
+        // Get submitted data
+        const submittedName = nameField.value.trim();
+        const submittedMessage = messageField.value.trim();
+        
+        // Create new entry div
+        const newEntry = document.createElement("div");
+        newEntry.classList.add("contact-present-items");
+        newEntry.innerHTML = `
+            <p><strong>暱稱:</strong> ${submittedName}</p>
+            <p><strong>想對U-san說的話:</strong> ${submittedMessage}</p>
+        `;
+
+        // Append new entry to the container
+        submittedContentContainer.appendChild(newEntry);
+
+        // If there are more than MAX_ITEMS, remove the first (oldest) item to create the carousel effect
+        if (submittedContentContainer.children.length > MAX_ITEMS) {
+            submittedContentContainer.removeChild(submittedContentContainer.firstElementChild);
+        }
+
+        // Optionally, submit the form to Google Forms
+        form.submit();
+    });
 });
+
+
 
 
 
