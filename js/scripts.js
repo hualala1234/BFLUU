@@ -105,3 +105,24 @@ document.addEventListener("DOMContentLoaded", function () {
     handleScroll(); // 頁面載入時也執行一次，確保初始狀態
   });
   
+
+
+  document.getElementById('email').addEventListener('input', function () {
+    const emailInput = this;
+    const requiredFeedback = emailInput.nextElementSibling;       // 「這是必填問題」的錯誤提示
+    const emailFeedback = requiredFeedback.nextElementSibling;    // 「請輸入有效的電子郵件地址」的錯誤提示
+
+    if (emailInput.value.trim() === '') {
+        // 當輸入為空時，僅顯示「這是必填問題」
+        requiredFeedback.style.display = 'block';
+        emailFeedback.style.display = 'none';
+    } else if (emailInput.validity.typeMismatch) {
+        // 當輸入的格式不正確時，僅顯示「請輸入有效的電子郵件地址」
+        requiredFeedback.style.display = 'none';
+        emailFeedback.style.display = 'block';
+    } else {
+        // 當輸入有效時，不顯示任何錯誤提示
+        requiredFeedback.style.display = 'none';
+        emailFeedback.style.display = 'none';
+    }
+});
