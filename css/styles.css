@@ -592,6 +592,14 @@ progress {
   
 }
 
+.list-inline a{
+  color: #212529;
+}
+
+.list-inline a:hover{
+  color: #3366CC;
+}
+
 .list-inline-item {
   display: inline-block;
 }
@@ -11103,7 +11111,7 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item {
   width: 420px;
   height: 332px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11550,6 +11558,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   line-height: 3rem;
 
 }
+
 @media (max-width: 1377px){
   .information-text{
     text-align: justify;
@@ -11571,6 +11580,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     width: 317px;
     height: 360px;
     background-color: #FFFFFF;
+    
   }
   
   #portfolio .portfolio-item .portfolio-link .portfolio-hover {
@@ -11624,7 +11634,9 @@ section#contact form#contactForm :-ms-input-placeholder {
     height: 300px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 2rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
   }
   .modal-body strong{
     font-size: 1.6rem;
