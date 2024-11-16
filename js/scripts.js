@@ -148,23 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // 初始檢查表單狀態
     checkFormValidity();
-    
-    // 清空表單欄位的函式
-    form.addEventListener("submit", function (event) {
-        // 確認表單的action為Google Form並使用target='_blank'
-        event.preventDefault();
-        form.submit(); // 在新視窗提交表單
-        // 清除欄位內容
-        nameField.value = "";
-        messageField.value = "";
-        checkFormValidity(); // 更新按鈕狀態
-    });
 });
 
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    const formData = new FormData(event.target);
-    console.log("提交的數據：", Object.fromEntries(formData.entries()));
-});
+
 
 
 
