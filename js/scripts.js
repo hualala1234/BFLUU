@@ -161,6 +161,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    const formData = new FormData(event.target);
+    console.log("提交的數據：", Object.fromEntries(formData.entries()));
+});
 
 
 
