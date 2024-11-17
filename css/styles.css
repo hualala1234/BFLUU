@@ -11748,15 +11748,9 @@ body{
 #prevBtn, #nextBtn {
   font-size: 24px; /* Larger font size for arrows */
   padding: 10px 20px;
-  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50%;
   margin: 20px;
   cursor: pointer;
 }
 
-#prevBtn:disabled, #nextBtn:disabled {
-  background-color: #ccc; /* Disabled button style */
-  cursor: not-allowed;
-}
