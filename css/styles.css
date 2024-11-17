@@ -10970,7 +10970,9 @@ p {
 #mainNav {
   padding-top: 0rem;
   padding-bottom: 1rem;
+  display: flex;
   background-color: #21252991;
+  justify-content: center;
 }
 
 #mainNav .navbar-toggler {
@@ -11736,4 +11738,25 @@ body{
 
 .contact-present-items p {
   margin: 0 0 10px 0; /* Space between paragraphs */
+}
+
+
+.card-container {
+  margin-top: 30px;
+}
+
+#prevBtn, #nextBtn {
+  font-size: 24px; /* Larger font size for arrows */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  margin: 20px;
+  cursor: pointer;
+}
+
+#prevBtn:disabled, #nextBtn:disabled {
+  background-color: #ccc; /* Disabled button style */
+  cursor: not-allowed;
 }

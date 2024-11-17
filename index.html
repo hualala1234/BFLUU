@@ -613,16 +613,16 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="contactForm" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSclPFScO9SKu0WFSxqzsF1yAnXUWWcWkHrzI8B0VBMYhmvf4A/formResponse" target="_blank" >
+                <form id="contactForm" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSclPFScO9SKu0WFSxqzsF1yAnXUWWcWkHrzI8B0VBMYhmvf4A/formResponse" >
                     <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="form-group mb-md-4">
                                 <!-- Name input-->
                                 <input class="form-control" id="name" type="text" name="entry.1324810562" placeholder="暱稱" data-sb-validations="required" autocomplete="off"/>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">這是必填問題</div>
                             </div>    
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
                                 <textarea class="form-control" id="message" name="entry.1292438900" placeholder="想對U-san說的話" data-sb-validations="required"></textarea>
@@ -644,8 +644,13 @@
                     <h3 class="section-subheading text-muted">先空著</h3>
                 </div>
                 <div class="row" id="submittedContent"></div> <!-- Container for dynamically added content -->
+                <div class="text-center">
+                    <button id="prevBtn" class="btn btn-primary">&larr;</button> <!-- Left Arrow -->
+                    <button id="nextBtn" class="btn btn-primary">&rarr;</button> <!-- Right Arrow -->
+                </div>
             </div>
         </section>
+        
         
         
         
