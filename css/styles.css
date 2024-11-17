@@ -11725,32 +11725,32 @@ body{
   height: auto;
 }
 
-.contact-present-items {
-  border: 1px solid #ddd; /* Light gray border */
-  padding: 15px;           /* Padding inside the box */
-  border-radius: 5px;      /* Rounded corners */
-  background-color: #f9f9f9; /* Light background color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin: 10px;
-  flex-basis: calc(33.33% - 20px); /* Ensures 3 items per row */
-  box-sizing: border-box; /* Prevents border/padding from affecting size */
+.card {
+  display: flex;
+  flex-direction: column; /* Allow content to grow in the card */
+  height: 100%; /* Ensure the card takes up full height of the row */
 }
 
-.contact-present-items p {
-  margin: 0 0 10px 0; /* Space between paragraphs */
+.card-body {
+  flex-grow: 1; /* Allow the body of the card to expand and fill the space */
 }
-
 
 .card-container {
   margin-top: 30px;
+  padding: 15px;
 }
 
 #prevBtn, #nextBtn {
-  font-size: 24px; /* Larger font size for arrows */
+  font-size: 24px;
   padding: 10px 20px;
   color: white;
   border: none;
+  border-radius: 5px;
   margin: 20px;
   cursor: pointer;
+}
+
+#prevBtn:disabled, #nextBtn:disabled {
+  cursor: not-allowed;
 }
 
