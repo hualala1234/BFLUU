@@ -11186,6 +11186,7 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content p {
   margin-bottom: 2rem;
   color: #6c757d;
+  letter-spacing: 0.03rem;
 }
 .portfolio-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
