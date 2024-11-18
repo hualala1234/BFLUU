@@ -728,6 +728,7 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
@@ -11112,7 +11113,7 @@ header.masthead .masthead-heading {
 }
 #portfolio .portfolio-item {
   width: 420px;
-  height: 332px;
+  
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin-left: auto;
   margin-right: auto;
@@ -11144,9 +11145,12 @@ header.masthead .masthead-heading {
   padding: 1.5rem;
   text-align: center;
   background-color: #fff;
+  height: 144px;
+  display: flex;
+  justify-content: center;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
@@ -11175,7 +11179,7 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .modal-content p.item-intro {
   font-style: italic;
-  margin-bottom: 2rem;
+  margin: 1rem;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: center;
 }
@@ -11439,6 +11443,9 @@ header.masthead .masthead-heading {
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .team-member img {
   width: 10rem;
@@ -11450,6 +11457,19 @@ header.masthead .masthead-heading {
   margin-bottom: 0;
 }
 
+.team-member .icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.team-member .member-list{
+  color: #6c757d;
+  font-weight: bold;
+}
+.team-member .member-list:hover{
+  color: #3366CC;
+  
+}
 .img-brand {
   height: 2.75rem;
 }
@@ -11581,7 +11601,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   #portfolio .portfolio-item {
     width: 317px;
-    height: 300px;
+    
     background-color: #FFFFFF;
     
   }
@@ -11635,7 +11655,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   #portfolio .portfolio-item {
     width: 320px;
-    height: 300px;
+
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -11754,3 +11774,10 @@ body{
   cursor: not-allowed;
 }
 
+.modal-body a{
+  color: #212529;
+}
+
+.modal-body a:hover{
+  color: #3366CC;
+}
