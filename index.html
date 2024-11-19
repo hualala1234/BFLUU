@@ -35,8 +35,8 @@
                         <li class="nav-item"><a class="nav-link" href="#services">活動資訊</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Unnämed介紹</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">時間軸</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">心得填寫</a></li>
-                        <li class="nav-item"><a class="nav-link" href=#contact-present>心得呈現</a></li>
+                        <li class="nav-item"><a class="nav-link" href=#contact-present>留言板</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">心得填寫</a></li>  
                         <li class="nav-item"><a class="nav-link" href="#team">工作人員</a></li>
                         
                     </ul>
@@ -58,19 +58,20 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <img src="assets/img/service/service-1.jpg" alt="">
+                        <a href="#portfolioModal4" data-bs-toggle="modal"><img src="assets/img/service/service-1.jpg" alt=""></a>
+                        
                         <h4 class="my-3">台北地下街燈箱應援</h4>
                         <p class="text-muted information-text">帥氣又美麗的U-san出現在台北地下街啦！<br>無論是白天還是夜晚，一起light U up<br>燈箱展示時間：2024年12月1日~12月31日<br>位置：台北車站地下街 N4</p>
                        
                     </div>
                     <div class="col-md-4">
-                        <img src="assets/img/service/service-2.jpg" alt="">
-
+                        <a href="#portfolioModal5" data-bs-toggle="modal"><img src="assets/img/service/service-2.jpg" alt=""></a>
                         <h4 class="my-3">應援咖啡企劃</h4>
                         <p class="text-muted information-text">Blue flämes light U up，應援咖啡來了！<br>除了精緻的飲料及甜點，還有充滿驚喜的小展覽喔！<br>咖啡應援時間：<br>台北：2024年12月14日~12月21日（17日公休）<br>高雄：2024年12月16日~12月22日</p>
                        
                     </div>
                     <div class="col-md-4">
+                        
                         <img src="assets/img/service/service-3.png" alt="">
                         <h4 class="my-3">Blue flämes light U up</h4>
                         <p class="text-muted small">更多資訊請參閱相關連結<br>X：<a href="https://x.com/BFLUUTW" target="_blank">https://x.com/BFLUUTW</a><br>Plurk：<a href="https://www.plurk.com/BlueflameslightUupTW" target="_blank">Blue flämes light U up</a></p>
@@ -585,11 +586,25 @@
                    
                 </ul>
             </div>
+        
+        <section class="page-section bg-light" id="contact-present">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">留言板</h2>
+                    <h3 class="section-subheading text-muted">先空著</h3>
+                </div>
+                <div class="row" id="submittedContent"></div> <!-- Container for dynamically added content -->
+                <div class="text-center">
+                    <button id="prevBtn" class="btn btn-primary">&larr;</button> <!-- Left Arrow -->
+                    <button id="nextBtn" class="btn btn-primary">&rarr;</button> <!-- Right Arrow -->
+                </div>
+            </div>
+        </section>
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h2 class="section-heading text-uppercase">心得填寫</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
@@ -623,19 +638,7 @@
         </section>
 
         
-        <section class="page-section" id="contact-present">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Submitted Content</h2>
-                    <h3 class="section-subheading text-muted">先空著</h3>
-                </div>
-                <div class="row" id="submittedContent"></div> <!-- Container for dynamically added content -->
-                <div class="text-center">
-                    <button id="prevBtn" class="btn btn-primary">&larr;</button> <!-- Left Arrow -->
-                    <button id="nextBtn" class="btn btn-primary">&rarr;</button> <!-- Right Arrow -->
-                </div>
-            </div>
-        </section>
+        
         
         
         
@@ -840,7 +843,7 @@
                                     <!-- Project details-->
                                     <strong>Blue flämes light U up<br>台北地下街燈箱應援</strong> 
                                     <p class="item-intro text-muted">燈箱展示時間：2024年12月1日~12月31日</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/header-bg.jpg" alt="..." />
                                     <p>Ex.台北車站地下街 N4</p>
                                     
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -893,6 +896,41 @@
                                     <h2 class="text-uppercase">Unnämed</h2>
                                     <p class="item-intro text-muted">Nice to see you again.</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Window
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Photography
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- service 7 modal popup-->
+         <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Unnämed</h2>
+                                    <p class="item-intro text-muted">Nice to see you again.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/header-bg.jpg" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>

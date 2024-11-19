@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactpresentNavLink = document.querySelector('.nav-link[href="#contact-present"]');
   const teamSection = document.getElementById("team");
   const teamNavLink = document.querySelector('.nav-link[href="#team"]');
-  const contactOffset = 100; // contact 的 margin-top 偏移量
-  const contactpresentOffset = 80; // contact-present 的 padding-top 偏移量
+  const contactOffset = 80; // contact 的 margin-top 偏移量
+  const contactpresentOffset = 100; // contact-present 的 padding-top 偏移量
   const teamOffset = -100; // team 的 padding-top 偏移量
 
   window.addEventListener("scroll", function () {
@@ -76,12 +76,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const teamTop = teamSection.offsetTop + teamOffset;
 
     // about 的範圍
-    if (scrollPos >= aboutTop && scrollPos < contactTop) {
+    if (scrollPos >= aboutTop && scrollPos < contactpresentTop) {
       aboutNavLink.classList.add("active");
       contactNavLink.classList.remove("active");
       contactpresentNavLink.classList.remove("active");
       teamNavLink.classList.remove("active");
     }
+    // contact-present 的範圍
+    else if (scrollPos >= contactpresentTop && scrollPos < contactTop) {
+        aboutNavLink.classList.remove("active");
+        contactNavLink.classList.remove("active");
+        contactpresentNavLink.classList.add("active");
+        teamNavLink.classList.remove("active");
+      }
     // contact 的範圍
     else if (scrollPos >= contactTop && scrollPos < contactpresentTop) {
       aboutNavLink.classList.remove("active");
@@ -89,13 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contactpresentNavLink.classList.remove("active");
       teamNavLink.classList.remove("active");
     }
-    // contact-present 的範圍
-    else if (scrollPos >= contactpresentTop && scrollPos < teamTop) {
-      aboutNavLink.classList.remove("active");
-      contactNavLink.classList.remove("active");
-      contactpresentNavLink.classList.add("active");
-      teamNavLink.classList.remove("active");
-    }
+    
     // 滾動到 team 的範圍
     else if (scrollPos >= teamTop) {
       aboutNavLink.classList.remove("active");
