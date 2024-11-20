@@ -61,3 +61,7 @@
 # 3D Images
 *.3dm
 *.max
+
+index.html
+style.css
+script.js
