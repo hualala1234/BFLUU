@@ -705,7 +705,7 @@ progress {
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container, .container-p {
-    max-width: 720px;
+    max-width: 760px;
   }
 }
 @media (min-width: 992px) {
@@ -1170,6 +1170,7 @@ progress {
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
+    padding: 0;
   }
   .col-md-5 {
     flex: 0 0 auto;
@@ -11295,6 +11296,10 @@ header.masthead .masthead-heading {
   margin-top: 30px;
   
 }
+
+#team .team-word {
+  text-align: center;
+}
 @media (max-width: 1000px){
   .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
@@ -11342,6 +11347,9 @@ header.masthead .masthead-heading {
     
     
   }
+  #team .team-word {
+    text-align:justify;
+  }
   
   
 }
@@ -11380,6 +11388,7 @@ header.masthead .masthead-heading {
     text-align: left;
   
   }
+  
 }
 @media (min-width: 992px) {
   .timeline > li {
@@ -11400,6 +11409,7 @@ header.masthead .masthead-heading {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
   }
+  
 }
 @media (min-width: 1200px) {
   .timeline > li {
@@ -11439,6 +11449,7 @@ header.masthead .masthead-heading {
     padding-right: 100px;
     color: #6c757d
   }
+  
   
 }
 .team-member {
@@ -11567,7 +11578,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-left: 5rem;
   margin-right: 3rem;
   font-size: 16px;
-
+  margin-top: 1rem;
 }
 .small{
   text-align: justify;
@@ -11583,12 +11594,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 @media (max-width: 1377px){
-  .information-text{
-    text-align: justify;
-    margin: 0 0.8rem;
-    
-    
-  }
   .small{
     text-align: justify;
     margin: 0 1.1rem;
@@ -11624,7 +11629,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   .information-text{
     text-align: justify;
-    margin: 0 1rem 3rem 1rem;
+    margin: 1rem 1rem 3rem 1rem;
    
   }
   .small {
@@ -11633,13 +11638,16 @@ section#contact form#contactForm :-ms-input-placeholder {
 
     font-size: 16px;
   }
+  #team .team-word {
+    text-align:justify;
+  }
 
 }
 @media (max-width: 430px){
   .information-text{
     text-align: justify;
 
-    margin: 0 2rem 3rem 2rem;
+    margin: 1rem 2rem 3rem 2rem;
 
     
   }
@@ -11680,6 +11688,9 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   #portfolio .portfolio-item .portfolio-link{
     width: 320px;
+  }
+  #team .team-word {
+    text-align:justify;
   }
 }
 
@@ -11781,4 +11792,20 @@ body{
 
 .modal-body a:hover{
   color: #3366CC;
+}
+
+.service-link{
+  color: #212529;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
 }
