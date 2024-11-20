@@ -694,7 +694,8 @@
                     </div>
                     <div class="col-md-5">
                         <div class="team-member">
-                            <img style="pointer-events: none;" class="mx-auto rounded-circle" src="assets/img/age.jpg" alt="..." />
+                            <img style="pointer-events: none;" class="mx-auto rounded-circle" src="assets/img/age.jpg" alt="">
+                            
                             <h4>炸雞</h4>
                             <p class="text-muted">網站架設</p>
                             <div class="icon">
@@ -972,6 +973,16 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="path/to/sb-forms-latest.js"></script>
+        <script>
+            document.addEventListener('contextmenu', (event) => event.preventDefault());
+            document.addEventListener('keydown', (event) => {
+                // 禁止 F12、Ctrl+Shift+I
+                if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                    event.preventDefault();
+                }
+            });
+        </script>
+        
         
     </body>
     
