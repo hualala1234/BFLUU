@@ -11308,6 +11308,9 @@ header.masthead .masthead-heading {
     margin-top: 0;
   }
   
+  .team > .team-member img {
+    width: 5rem;
+  }
 
 }
 .timeline > li.timeline-inverted > .timeline-panel:before {
