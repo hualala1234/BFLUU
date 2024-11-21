@@ -11311,6 +11311,9 @@ header.masthead .masthead-heading {
   .team > .team-member img {
     width: 5rem;
   }
+  #ting{
+    width:25% ;
+  }
 
 }
 .timeline > li.timeline-inverted > .timeline-panel:before {
