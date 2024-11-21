@@ -11311,9 +11311,7 @@ header.masthead .masthead-heading {
   .team > .team-member img {
     width: 5rem;
   }
-  #ting{
-    width:25% ;
-  }
+  
 
 }
 .timeline > li.timeline-inverted > .timeline-panel:before {
@@ -11618,6 +11616,9 @@ section#contact form#contactForm :-ms-input-placeholder {
     background-color: #FFFFFF;
     
   }
+  #ipad {
+    width: 25%;
+  }
   
   #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     display: flex;
@@ -11707,6 +11708,22 @@ section#contact form#contactForm :-ms-input-placeholder {
   #team .team-word {
     text-align:justify;
   }
+  .team >#ipad {
+    width: auto;
+    
+    flex: auto;
+  }
+  .team {
+  
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-0.5* var(--bs-gutter-x));
+    margin-left: calc(-0.5* var(--bs-gutter-x));
+}
 }
 
 .portfolio-caption{
@@ -11831,7 +11848,7 @@ body{
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-  
+
     margin-top: calc(-1* var(--bs-gutter-y));
     margin-right: calc(-0.5* var(--bs-gutter-x));
     margin-left: calc(-0.5* var(--bs-gutter-x));
