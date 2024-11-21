@@ -11460,9 +11460,10 @@ header.masthead .masthead-heading {
   align-items: center;
 }
 .team-member img {
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 6rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
 }
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
@@ -11644,6 +11645,14 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 }
 @media (max-width: 430px){
+  .team {
+    
+    width: 100%;
+  }
+  .team-member{
+    margin: 0 2.2rem;
+    margin-bottom: 3rem;
+  }
   .information-text{
     text-align: justify;
 
@@ -11810,3 +11819,14 @@ body{
   margin-left: 2rem;
 }
 
+.team {
+  
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-0.5* var(--bs-gutter-x));
+    margin-left: calc(-0.5* var(--bs-gutter-x));
+}
