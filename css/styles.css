@@ -11428,15 +11428,19 @@ header.masthead .masthead-heading {
 
   }
   #less-word {
-    padding: 0 0 20px 15em;
+    padding: 0 0 20px 18em;
     
   }
   #less-word2 {
-    padding: 0 0 20px 10em;
+    padding: 0 0 20px 13em;
     
   }
   #less-word3 {
-    padding: 0 0 20px 20em;
+    padding: 0 0 20px 22em;
+    
+  }
+  #less-word4 {
+    padding: 0 0 20px 9em;
     
   }
   .timeline > li .timeline-image {
