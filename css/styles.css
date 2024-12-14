@@ -5384,6 +5384,7 @@ textarea.form-control-lg {
 .modal-content {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
   width: 100%;
