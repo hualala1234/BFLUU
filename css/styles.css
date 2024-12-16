@@ -11499,12 +11499,14 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/thankcard.png");
-  background-size: cover;
+  background-color: #f8f9fa;
+  background-image: url(../assets/img/thankcard3.png), url(../assets/img/thankcard2.png), url(../assets/img/thankcard1.png);
+  background-size: 50% auto, 100% auto, 100% auto;
+  background-size: 80%, contain, contain;
   background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
+  background-position: 115% 60%, center, center;
+  width: 100%
+  
 }
 section#contact .section-heading {
   color: #212529;
@@ -11730,7 +11732,16 @@ section#contact form#contactForm :-ms-input-placeholder {
     margin-top: calc(-1* var(--bs-gutter-y));
     margin-right: calc(-0.5* var(--bs-gutter-x));
     margin-left: calc(-0.5* var(--bs-gutter-x));
-}
+  }
+  section#contact {
+    background-color: #f8f9fa;
+    background-image: url(../assets/img/thankcard3.png);
+    background-size: 90%;
+    /* background-size: contain; */
+    background-repeat: no-repeat, repeat;
+    background-position: 99% 0%;
+    width: 100%;
+  }
 }
 
 .portfolio-caption{
@@ -11743,7 +11754,7 @@ body{
   width: 100%;
 }
 #contact {
-  margin-top: 10rem;
+  padding: 10rem 0;
 }
 
 .offwhite {
