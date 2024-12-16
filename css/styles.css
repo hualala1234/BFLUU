@@ -2049,6 +2049,7 @@ progress {
   color: #6c757d;
 }
 
+
 .form-control {
   display: block;
   width: 100%;
@@ -2059,7 +2060,7 @@ progress {
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #6c757d;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -11499,14 +11500,14 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/img/thankcard.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
 }
 section#contact .section-heading {
-  color: #fff;
+  color: #212529;
 }
 section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;
