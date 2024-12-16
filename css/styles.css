@@ -11735,7 +11735,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   section#contact {
     background-color: #f8f9fa;
-    background-image: url(../assets/img/thankcard3.png);
+    background-image: url(../assets/img/thankcard3.png),url(../assets/img/thankcard1.png);
     background-size: 90%;
     /* background-size: contain; */
     background-repeat: no-repeat, repeat;
