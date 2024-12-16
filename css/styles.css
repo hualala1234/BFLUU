@@ -11502,9 +11502,9 @@ section#contact {
   background-color: #f8f9fa;
   background-image: url(../assets/img/thankcard3.png), url(../assets/img/thankcard2.png), url(../assets/img/thankcard1.png);
   background-size: 50% auto, 100% auto, 100% auto;
-  background-size: 80%, contain, contain;
+  background-size: contain, contain, contain;
   background-repeat: no-repeat;
-  background-position: 115% 60%, center, center;
+  background-position: center, center, center;
   width: 100%
   
 }
