@@ -11742,6 +11742,11 @@ section#contact form#contactForm :-ms-input-placeholder {
     background-position: 99% 0%;
     width: 100%;
   }
+
+  .container .location-image img{
+    width: 100%;
+    
+  }
 }
 
 .portfolio-caption{
@@ -11878,4 +11883,17 @@ body{
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 2rem;
+}
+
+.location-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5rem;
+
+}
+
+.location-image img{
+  width: 45%;
+  margin: 0 1rem;
 }
