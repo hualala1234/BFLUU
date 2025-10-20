@@ -11053,7 +11053,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("https://cdn.jsdelivr.net/gh/hualala1234/BFLUU/assets/img/header-bg.webp");
+  background-image: url("../assets/img/header-bg.webp");
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
@@ -11286,7 +11286,6 @@ header.masthead .masthead-heading {
   border: 7px solid #e9ecef;
   border-radius: 100%;
   background-color: aliceblue;
-
 }
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
@@ -11430,9 +11429,6 @@ header.masthead .masthead-heading {
     padding: 0 0px 20px 100px;
 
   }
-  .timeline-inverted > .timeline-panel .timeline-body .text-muted{
-    padding: 0 0px 20px 0px!important;
-  }
   #less-word {
     padding: 0 0 20px 18em;
     
@@ -11504,7 +11500,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #f8f9fa;
-  background-image: url(https://cdn.jsdelivr.net/gh/hualala1234/BFLUU/assets/img/thankcard3.png), url(https://cdn.jsdelivr.net/gh/hualala1234/BFLUU/assets/img/thankcard2.png), url(https://cdn.jsdelivr.net/gh/hualala1234/BFLUU/assets/img/thankcard1.png);
+  background-image: url(../assets/img/thankcard3.png), url(../assets/img/thankcard2.png), url(../assets/img/thankcard1.png);
   background-size: 50% auto, 100% auto, 100% auto;
   background-size: contain, contain, contain;
   background-repeat: no-repeat;
@@ -11739,7 +11735,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   section#contact {
     background-color: #f8f9fa;
-    background-image: url(https://cdn.jsdelivr.net/hualala1234/BFLUU/assets/img/thankcard3.png?raw=true),url(https://github.com/hualala1234/BFLUU/blob/main/assets/img/thankcard1.png?raw=true);
+    background-image: url(../assets/img/thankcard3.png),url(../assets/img/thankcard1.png);
     background-size: 90%;
     /* background-size: contain; */
     background-repeat: no-repeat, repeat;
@@ -11901,4 +11897,3 @@ body{
   width: 45%;
   margin: 0 1rem;
 }
-
