@@ -165,74 +165,83 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = "https://script.google.com/macros/s/AKfycbzLOpngDyrsg1pESxEHM7yIdgA3fUTqCQntKSiNEPFt3zOx4Qobww2mlutB5BgT5QfeYQ/exec";
-  const submittedContent = document.getElementById("submittedContent");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
 
-  let data = [];
-  let currentPage = 0;
-  const itemsPerPage = 4;
+  function loadData(apiUrl, contentId, prevId, nextId) {
+    const submittedContent = document.getElementById(contentId);
+    const prevBtn = document.getElementById(prevId);
+    const nextBtn = document.getElementById(nextId);
 
-  // Fetch the data from the Google Apps Script API
-  fetch(apiUrl)
+    let data = [];
+    let currentPage = 0;
+    const itemsPerPage = 4;
+
+    fetch(apiUrl)
       .then(response => response.json())
       .then(fetchedData => {
-          data = fetchedData.reverse(); // Reverse the order if needed
-          displayPage(currentPage); // Display the first page of content
+        data = fetchedData.reverse();
+        displayPage(currentPage);
       })
-      .catch(error => {
-          console.error("Error fetching data:", error);
-      });
+      .catch(error => console.error("Error fetching data:", error));
 
-  function displayPage(page) {
-      // Clear the existing content
+    function displayPage(page) {
       submittedContent.innerHTML = "";
 
-      // Get the slice of data for the current page
       const start = page * itemsPerPage;
       const end = start + itemsPerPage;
       const pageData = data.slice(start, end);
 
-      // Add the content for this page
       pageData.forEach(item => {
-          const contentDiv = document.createElement("div");
-          contentDiv.classList.add("col-md-5", "mb-3");
-          contentDiv.innerHTML = `
-              <div class="card">
-                  <div class="card-body">
-                      <h5 class="card-title">${item.name}</h5>
-                      <div style="
-                          white-space: pre-wrap;
-                          font-size: 16px;
-                          line-height: 1.5;
-                          text-align: left;
-                      ">${item.message}</div>
-                  </div>
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("col-md-5", "mb-3");
+        contentDiv.innerHTML = `
+          <div class="card">
+              <div class="card-body ">
+                  <h5 class="card-title">${item.name}</h5>
+                  <div style="
+                      white-space: pre-wrap;
+                      font-size: 16px;
+                      line-height: 1.5;
+                      text-align: left;
+                  ">${item.message}</div>
               </div>
-          `;
-          submittedContent.appendChild(contentDiv);
+          </div>
+        `;
+        submittedContent.appendChild(contentDiv);
       });
 
-      // Disable/Enable buttons based on the current page
       prevBtn.disabled = currentPage === 0;
       nextBtn.disabled = currentPage === Math.ceil(data.length / itemsPerPage) - 1;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 0) {
+        currentPage--;
+        displayPage(currentPage);
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentPage < Math.ceil(data.length / itemsPerPage) - 1) {
+        currentPage++;
+        displayPage(currentPage);
+      }
+    });
   }
 
-  // Event listeners for pagination buttons
-  prevBtn.addEventListener("click", () => {
-      if (currentPage > 0) {
-          currentPage--;
-          displayPage(currentPage);
-      }
-  });
+  // ✅ 分別載入兩份資料
+  loadData(
+    "https://script.google.com/macros/s/AKfycbzLOpngDyrsg1pESxEHM7yIdgA3fUTqCQntKSiNEPFt3zOx4Qobww2mlutB5BgT5QfeYQ/exec",
+    "submittedContent",
+    "prevBtn",
+    "nextBtn"
+  );
 
-  nextBtn.addEventListener("click", () => {
-      if (currentPage < Math.ceil(data.length / itemsPerPage) - 1) {
-          currentPage++;
-          displayPage(currentPage);
-      }
-  });
+  loadData(
+    "https://script.google.com/macros/s/AKfycbw7SrhmvCMFzg_8LQSIQB2St7509dJb7wGCUavzN2X--pdkh3mK5TJ6qyOiB3phyaC2/exec",
+    "submittedContent2025",
+    "prevBtn2025",
+    "nextBtn2025"
+  );
 });
 
 

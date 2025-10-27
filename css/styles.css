@@ -11839,11 +11839,23 @@ body{
   margin: 20px;
   cursor: pointer;
 }
+#prevBtn2025, #nextBtn2025 {
+  font-size: 24px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  cursor: pointer;
+}
 
 #prevBtn:disabled, #nextBtn:disabled {
   cursor: not-allowed;
 }
 
+#prevBtn2025:disabled, #nextBtn2025:disabled {
+  cursor: not-allowed;
+}
 .modal-body a{
   color: #212529;
 }
