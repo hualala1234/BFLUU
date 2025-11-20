@@ -246,9 +246,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener('contextmenu', (event) => event.preventDefault());
-            document.addEventListener('keydown', (event) => {
-                // 禁止 F12、Ctrl+Shift+I
-                if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
-                    event.preventDefault();
-                }
-            });
+  document.addEventListener('keydown', (event) => {
+      // 禁止 F12、Ctrl+Shift+I
+    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+        event.preventDefault();
+    }
+});
+
+
