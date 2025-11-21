@@ -11921,3 +11921,30 @@ body{
   width: 45%;
   margin: 0 1rem;
 }
+
+.snap {
+  max-width: 50%;
+}
+.snap-small-container {
+  gap: 1.5rem;
+}
+.snap-small-container img {
+  width: 25%;
+  height: auto;
+}
+@media(max-width: 576px){
+  .snap-description {
+    font-size: 0.9rem;
+  }
+  .snap-small-container {
+    gap: 1rem;
+  }
+  .snap {
+    max-width: 80%;
+  }
+  .snap-small-container img {
+    width: 50%;
+    height: auto;
+  }
+}
+
