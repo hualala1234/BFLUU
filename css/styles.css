@@ -11598,7 +11598,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .portfolio-img{
   width: 420px;
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   
 }
 .information-text{
